@@ -50,10 +50,12 @@ class _LineDashedState extends SampleViewState {
           isVisible: isCardView ? false : true,
           overflowMode: LegendItemOverflowMode.wrap),
       primaryXAxis: NumericAxis(
+          isInversed: true,
           edgeLabelPlacement: EdgeLabelPlacement.shift,
           majorGridLines: const MajorGridLines(width: 0),
           interval: 2),
       primaryYAxis: NumericAxis(
+          opposedPosition: true,
           minimum: 3,
           maximum: 21,
           interval: isCardView ? 6 : 3,

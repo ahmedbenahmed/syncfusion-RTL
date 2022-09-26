@@ -124,6 +124,7 @@ class _LineZoneState extends SampleViewState {
       title: ChartTitle(
           text: isCardView ? '' : 'Average annual rainfall of United Kingdom'),
       primaryXAxis: DateTimeAxis(
+          isInversed: true,
           edgeLabelPlacement: model.isWebFullView
               ? EdgeLabelPlacement.shift
               : EdgeLabelPlacement.none,
@@ -132,6 +133,7 @@ class _LineZoneState extends SampleViewState {
           interval: kIsWeb ? 5 : 10,
           majorGridLines: const MajorGridLines(width: 0)),
       primaryYAxis: NumericAxis(
+          opposedPosition: true,
           labelFormat: '{value}mm',
           minimum: 24,
           maximum: 36,

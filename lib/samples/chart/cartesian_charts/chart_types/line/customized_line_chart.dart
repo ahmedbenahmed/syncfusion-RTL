@@ -49,12 +49,14 @@ class _LineDefaultState extends SampleViewState {
       title: ChartTitle(
           text: isCardView ? '' : 'Capital investment as a share of exports'),
       primaryXAxis: DateTimeAxis(
+        isInversed: true,
         edgeLabelPlacement: EdgeLabelPlacement.shift,
         dateFormat: DateFormat.yMMM(),
         intervalType: DateTimeIntervalType.months,
         interval: 3,
       ),
       primaryYAxis: NumericAxis(
+          opposedPosition: true,
           labelFormat: '{value}%',
           minimum: 1,
           maximum: 3.5,

@@ -40,9 +40,12 @@ class _AnimationLineDefaultState extends SampleViewState {
   SfCartesianChart _buildAnimationLineChart() {
     return SfCartesianChart(
         plotAreaBorderWidth: 0,
-        primaryXAxis:
-            NumericAxis(majorGridLines: const MajorGridLines(width: 0)),
+        primaryXAxis: NumericAxis(
+          isInversed: true,
+          majorGridLines: const MajorGridLines(width: 0),
+        ),
         primaryYAxis: NumericAxis(
+            opposedPosition: true,
             majorTickLines: const MajorTickLines(color: Colors.transparent),
             axisLine: const AxisLine(width: 0),
             minimum: 0,

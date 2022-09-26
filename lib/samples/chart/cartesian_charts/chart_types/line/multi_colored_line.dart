@@ -40,11 +40,13 @@ class _LineMultiColorState extends SampleViewState {
       title: ChartTitle(text: isCardView ? '' : 'Annual rainfall of Paris'),
       plotAreaBorderWidth: 0,
       primaryXAxis: DateTimeAxis(
+          isInversed: true,
           intervalType: DateTimeIntervalType.years,
           dateFormat: DateFormat.y(),
           majorGridLines: const MajorGridLines(width: 0),
           title: AxisTitle(text: isCardView ? '' : 'Year')),
       primaryYAxis: NumericAxis(
+          opposedPosition: true,
           minimum: 200,
           maximum: 600,
           interval: 100,

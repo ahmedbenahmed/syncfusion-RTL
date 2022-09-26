@@ -49,10 +49,12 @@ class _LineDefaultState extends SampleViewState {
           isVisible: isCardView ? false : true,
           overflowMode: LegendItemOverflowMode.wrap),
       primaryXAxis: NumericAxis(
+          isInversed: true,
           edgeLabelPlacement: EdgeLabelPlacement.shift,
           interval: 2,
           majorGridLines: const MajorGridLines(width: 0)),
       primaryYAxis: NumericAxis(
+          opposedPosition: true,
           labelFormat: '{value}%',
           axisLine: const AxisLine(width: 0),
           majorTickLines: const MajorTickLines(color: Colors.transparent)),
